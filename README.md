@@ -65,3 +65,9 @@ To run and attach terminal for troubleshooting:
 ```bash
 docker container run -it cppseed /bin/bash
 ```
+
+To cleanup all docker containers, images, and volumnes that are unused:
+
+```bash
+docker system prune -a
+```
