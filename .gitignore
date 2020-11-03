@@ -32,6 +32,4 @@
 *.app
 
 # Paths
-/build/*
 /cmake/*
-/docs/*
