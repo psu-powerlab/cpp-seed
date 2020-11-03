@@ -33,3 +33,5 @@
 
 # Paths
 /cmake/*
+/build/*
+/docs/*
