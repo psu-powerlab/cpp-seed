@@ -5,7 +5,18 @@
 # You should always specify a range with the newest
 # and oldest tested versions of CMake. This will ensure
 # you pick up the best policies.
-cmake_minimum_required(VERSION 3.14...3.18)
+cmake_minimum_required(VERSION 3.11...3.19)
+
+# MACRO to allow 3.14+ syntax
+if(${CMAKE_VERSION} VERSION_LESS 3.14)
+    macro(FetchContent_MakeAvailable NAME)
+        FetchContent_GetProperties(${NAME})
+        if(NOT ${NAME}_POPULATED)
+            FetchContent_Populate(${NAME})
+            add_subdirectory(${${NAME}_SOURCE_DIR} ${${NAME}_BINARY_DIR})
+        endif()
+    endmacro()
+endif()
 
 # This is your project statement. You should always list languages;
 # Listing the version is nice here since it sets lots of useful variables

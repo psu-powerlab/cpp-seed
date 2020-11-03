@@ -1,0 +1,11 @@
+Dockerfile
+
+# GitHub files
+.git
+.gitignore
+README.md
+
+# dirs
+build
+cmake
+docs
