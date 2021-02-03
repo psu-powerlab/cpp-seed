@@ -37,7 +37,7 @@ int main()
 
     // Second example: STL strings use boost::smatch results.
     {
-        std::string input_stlstr = "2007-03-34";
+        std::string input_stlstr = "2020-01-34";
         boost::smatch str_matches;
 
         if (boost::regex_match(input_stlstr, str_matches, date_regex))
